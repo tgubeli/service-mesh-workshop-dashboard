@@ -111,17 +111,23 @@ oc get pods -n %username%-istio
 </blockquote>
 
 ## Installing Openshift Service Mesh
-The installation process is managed by an Operator, so through a CRD (Custom Resource Definition -a configuration in a YAML fashion/structure) we a re going to define all the service mesh components that we require to deploy.
+The installation process is managed by an Operator, so through a CRD (Custom Resource Definition -a configuration in a YAML fashion/structure) we a re going to define all the service mesh components that we'll require to deploy.
 
 1. First go to Openshift Web Console and log in with your credentials.
+
 2. Go to "Administrator" view > Projects and select (clic on) the project %username%-istio
 <img src="images/install-02.png" width="1024"><br/>
+
 3. Then select from the left menu <b>Operators > Installed Operators</b>, and then clic on "Red Hat Openshift service Mesh" operator.
 <img src="images/install-03.png" width="1024"><br/>
-4. Now we are going to delete the actual CRD and replace it with a new one. So firts just delete the actual CRD from the "Istio Service Mesh Control Plane" tab, then clic in the dots to show the options available forr this configuration as is shown in the picture below and click en "Delete" and then confirm the delete action:
+
+4. Now we are going to delete the actual CRD and replace it with a new one. So first just delete the actual CRD from the "Istio Service Mesh Control Plane" tab, then clic on the dots to show the options available for this configuration as is shown in the picture below, click in the "Delete" option and then confirm:
+
 <img src="images/install-05.png" width="1024"><br/>
+
 5. Clic in the "Create ServiceMeshControlPlane" button in order to open the form that will guide us to deploy a new Service Mesh Control Plane in our project.
 <img src="images/install-07.png" width="1024"><br/>
+
 6. We are just going to left everything by default. In a production  environment we can modify any value on the fly if needed (limit/expand cpu and mem resources, activate persistence and so on). So just clic in the  "Create" button.
 <img src="images/install-08.png" width="1024"><br/>
 
